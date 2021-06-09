@@ -1,0 +1,23 @@
+# database config
+
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+ 
+development:
+  <<: *default
+  database: rails_blog_api_development
+
+test:
+  <<: *default
+  host: <%= "#{ENV['DATABASE_HOST']}_test" %>
+  database: rails_blog_api_test
+
+production:
+  <<: *default
+  database: rails_blog_api_production
+
