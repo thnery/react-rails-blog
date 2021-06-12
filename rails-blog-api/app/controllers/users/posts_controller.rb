@@ -22,7 +22,7 @@ class Users::PostsController < ApplicationController
   protected
 
   def post_params
-    params.require(:post).permit(:title, :content, :author_id)
+    params.require(:post).permit(:title, :content)
   end
 
   def set_post
