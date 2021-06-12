@@ -47,3 +47,7 @@ Setup the database
 To check the logs with Docker Compose in daemon (-d option), run:
 
 * `$ docker-compose logs -f api`
+
+#### Specifications
+
+* Hottest Posts: The posts with more reactions for its comments
